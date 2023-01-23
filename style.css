@@ -111,6 +111,12 @@ span {
   line-height: 1.9rem;
   letter-spacing: -0.01em;
   color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.middle button:hover {
+  background: hsla(71, 73%, 54%, 80%);
 }
 
 .bottom {
