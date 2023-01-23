@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --Cyan2: hsl(179, 47%, 53%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 7.2rem 3.2rem;
+  background-color: var(--Light-Gray);
+}
+
+main {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 63.5rem;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.21);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: var(--Cyan);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: white;
+  margin-bottom: 1.8rem;
+}
+
+span {
+  display: block;
+}
+
+.top {
+  padding: 2.4rem;
+}
+
+.top h1 {
+  margin: 0.4rem 0 2.4rem;
+}
+
+.top span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--Bright-Yellow);
+  margin-bottom: 1.6rem;
+}
+
+.top p {
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  color: var(--Grayish-Blue);
+  margin-bottom: 0.8rem;
+}
+
+.middle {
+  background: var(--Cyan);
+  padding: 2.4rem;
+}
+
+.middle span {
+  display: flex;
+  color: var(--Light-Gray);
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.middle span b {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.7rem;
+}
+
+.middle button {
+  width: 100%;
+  border: 0;
+  height: 4.8rem;
+  background: var(--Bright-Yellow);
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.21);
+  border-radius: 0.5rem;
+  margin-top: 2.3rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.01em;
+  color: white;
+}
+
+.bottom {
+  background: var(--Cyan2);
+  padding: 2.4rem;
+}
+
+.bottom span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--Light-Gray);
+}
+
+@media screen and (min-width: 580px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas:
+      "top top"
+      "middle bottom";
+  }
+
+  .top {
+    grid-area: top;
+    padding: 4rem;
+  }
+
+  .top h1 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin: 0 0 2.4rem;
+  }
+
+  .top span {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .top p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin: 0;
+  }
+
+  .middle {
+    grid-area: middle;
+    padding: 4rem;
+  }
+
+  .bottom {
+    grid-area: bottom;
+    padding: 4rem;
+  }
+}
